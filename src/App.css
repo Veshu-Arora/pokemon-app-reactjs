@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .App {
+  text-align: center;
+} */
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: lightgreen;
+}
+
+nav a {
+  margin-right: 50px;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.list-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.list-wrapper .pokemon-item {
+  margin: 10px 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid rgb(71, 201, 71);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.list-wrapper a {
+  color: black;
+  text-decoration: none;
+}
+
+.pokemon {
+  width: 90%;
+  margin: auto;
+}
+
+.pokemon-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.pokemon-wrapper .item {
+  width: 30%;
+}
+
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-wrapper input {
+  outline: none;
+  border: 2px solid black;
+  width: 300px;
+}
+
+
+.pagination-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-navlink {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.pokemon-feature-name {
+  text-decoration: underline;
+}
