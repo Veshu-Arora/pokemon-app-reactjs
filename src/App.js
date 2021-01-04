@@ -3,19 +3,21 @@ import './App.css';
 import { Switch, Route, NavLink, Redirect } from 'react-router-dom';
 import PokemonList from './components/PokemonList';
 import Pokemon from './components/Pokemon';
+import Login from './components/Login';
 
 function App() {
   return (
     <div className="App">
 
-      <nav>
+      {/* <nav>
         <NavLink className = 'search-navlink' to = {"/"} title = 'Search'>Search</NavLink>
-      </nav>
+      </nav> */}
 
       <Switch>
-        <Route path = {"/"} exact component = {PokemonList} />
+      <Route path = {"/"} exact component = {Login} />
+        <Route path = {"/homepage"} exact component = {PokemonList} />
         <Route path = {"/pokemon/:pokemon"} exact component = {Pokemon} />
-        <Redirect to = {"/"} />
+        <Redirect to = {"/homepage"} />
       </Switch>
     </div>
   );

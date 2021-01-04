@@ -26,7 +26,7 @@ const PokemonMultipleReducer = (state = DefaultState, action) => {
             return {
                 ...state,
                 loading: false,
-                errorMsg: "unable to find pokemon"
+                errorMsg: "Unable to find Pokemon, Search Again!"
             };
         default:
             return state

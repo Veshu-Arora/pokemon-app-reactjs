@@ -5,6 +5,8 @@ import { GetPokemonList } from '../actions/pokemonAction';
 import {Link} from "react-router-dom";
 import Pagination from 'react-pagination-library';
 import "react-pagination-library/build/css/index.css";
+import {NavLink } from 'react-router-dom';
+
 const PokemonList = (props) => {
 
     const [search, setSearch] = useState("")
@@ -46,7 +48,7 @@ const PokemonList = (props) => {
         }
 
         if(pokemonList.errorMsg !== "") {
-            return <p>{pokemonList.errorMsg}</p>
+            return <h2>{pokemonList.errorMsg}</h2>
         }
 
         return <p>Unable to get data</p>
@@ -55,8 +57,13 @@ const PokemonList = (props) => {
     return (
         <div>
 
+            <nav>
+                <NavLink className = 'search-navlink' to = {"/homepage"} title = 'Search'>Search</NavLink>
+            </nav>
+
             <div className = 'search-wrapper'>
                <input 
+                    title = 'Enter Pokemon Name In Lowercase Letters'
                     type = 'text'
                     onChange = {e => setSearch(e.target.value)} />
                <button onClick = {() => props.history.push(`/pokemon/${search}`)}>Search</button>
